@@ -29,9 +29,9 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, scrollPositio
         <div className="flex items-center justify-between">
           <a href="#" className="flex flex-col items-center">
             <img 
-              src="https://images.pexels.com/photos/5801254/pexels-photo-5801254.jpeg"
-              alt="XNOTIES Logo"
-              className="w-12 h-12 object-cover mb-1 rounded-full"
+              src="https://raw.githubusercontent.com/your-username/your-repo/main/xnt-logo.png"
+              alt="XNT Logo"
+              className="w-12 h-12 object-cover mb-1"
             />
             <span className="text-2xl font-bold tracking-tighter">XNOTIES</span>
           </a>
@@ -49,22 +49,42 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, scrollPositio
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
-            <button onClick={toggleDarkMode} className="p-1 hover:text-gray-500 dark:hover:text-gray-400 transition-colors">
+            <button 
+              onClick={toggleDarkMode} 
+              className="p-1 hover:text-gray-500 dark:hover:text-gray-400 transition-colors"
+              aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+            >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>
-            <a href="#account" className="p-1 hover:text-gray-500 dark:hover:text-gray-400 transition-colors">
+            <a 
+              href="#account" 
+              className="p-1 hover:text-gray-500 dark:hover:text-gray-400 transition-colors"
+              aria-label="Account"
+            >
               <User size={20} />
             </a>
-            <a href="#cart" className="p-1 hover:text-gray-500 dark:hover:text-gray-400 transition-colors">
+            <a 
+              href="#cart" 
+              className="p-1 hover:text-gray-500 dark:hover:text-gray-400 transition-colors"
+              aria-label="Shopping cart"
+            >
               <ShoppingBag size={20} />
             </a>
           </div>
 
           <div className="md:hidden flex items-center space-x-4">
-            <button onClick={toggleDarkMode} className="p-1">
+            <button 
+              onClick={toggleDarkMode} 
+              className="p-1"
+              aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+            >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-1">
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)} 
+              className="p-1"
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
