@@ -29,7 +29,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, scrollPositio
         <div className="flex items-center justify-between">
           <a href="#" className="flex flex-col items-center">
             <img 
-              src="https://raw.githubusercontent.com/your-username/your-repo/main/xnt-logo.png"
+              src="https://i.imgur.com/XNT.png"
               alt="XNT Logo"
               className="w-12 h-12 object-cover mb-1"
             />
